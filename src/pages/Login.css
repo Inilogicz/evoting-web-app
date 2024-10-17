@@ -1,0 +1,83 @@
+/* Login.css and Signup.css */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+  }
+  
+  .login-container, .signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .login-card, .signup-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+  }
+  
+  .login-title, .signup-title {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #4caf50; /* Green theme */
+  }
+  
+  .login-form, .signup-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  
+  input {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  input:focus {
+    border-color: #4caf50; /* Focus effect */
+  }
+  
+  .login-button, .signup-button {
+    padding: 0.75rem;
+    background-color: #4caf50; /* Green button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .login-button:hover, .signup-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+  }
+  
+  .signup-prompt, .login-prompt {
+    text-align: center;
+    margin-top: 1rem;
+  }
+  
+  .signup-link, .login-link {
+    color: #4caf50; /* Green link */
+    text-decoration: none;
+  }
+  
+  .signup-link:hover, .login-link:hover {
+    text-decoration: underline;
+  }
+  

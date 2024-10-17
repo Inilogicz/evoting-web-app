@@ -1,0 +1,193 @@
+/* Home.css */
+
+/* General Styles */
+.home-container {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+    padding: 20px;
+    max-width: 1200px; /* Limit the width */
+    margin: 0 auto; /* Center align */
+}
+
+.home-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.home-title {
+    font-size: 2.5rem; /* Larger title for desktops */
+}
+
+.home-description {
+    font-size: 1.2rem; /* Description font size */
+    margin-bottom: 20px;
+}
+
+/* Buttons */
+.home-button {
+    background-color: #4caf50; /* Green background */
+    color: white;
+    padding: 10px 20px; /* Padding around button */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem; /* Button font size */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+/* Analytics Dashboard */
+.analytics-dashboard {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-around; /* Space out the cards */
+    width: 100%; /* Full width */
+    margin: 20px 0; /* Space above and below */
+}
+
+.dashboard-card {
+    background-color: #f1f1f1; /* Light grey background */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding inside the card */
+    width: 200px; /* Fixed width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    text-align: center; /* Center text */
+}
+
+.dashboard-value {
+    font-size: 2rem; /* Large number */
+    font-weight: bold; /* Bold for emphasis */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .home-title {
+        font-size: 2rem; /* Adjust title size for mobile */
+    }
+    .home-description {
+        font-size: 1rem; /* Adjust description size for mobile */
+    }
+    .home-button {
+        padding: 8px 16px; /* Adjust padding for mobile */
+        font-size: 0.9rem; /* Smaller font for mobile */
+    }
+    .analytics-dashboard {
+        flex-direction: column; /* Stack cards vertically on small screens */
+        align-items: center; /* Center align */
+    }
+    .dashboard-card {
+        width: 80%; /* Full width on mobile */
+        margin-bottom: 20px; /* Space between cards */
+    }
+}
+
+@media (max-width: 480px) {
+    .home-title {
+        font-size: 1.8rem; /* Smaller title for very small screens */
+    }
+    .home-description {
+        font-size: 0.9rem; /* Smaller description for very small screens */
+    }
+    .home-button {
+        width: 100%; /* Full width button on small screens */
+    }
+}
+/* Navbar styles */
+.navbar {
+    display: flex; /* Use flex layout */
+    justify-content: space-between; /* Space between brand and links */
+    align-items: center; /* Center items vertically */
+    padding: 15px 20px; /* Adjust padding for better spacing */
+    background-color: #4caf50; /* Green color */
+    color: white; /* Text color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    position: relative; /* Positioning for the hamburger icon */
+    z-index: 1000; /* Ensure it is above other elements */
+}
+
+/* Brand title styling */
+.navbar-brand h1 {
+    margin: 0;
+    font-size: 28px; /* Increased size for visibility */
+    font-weight: bold; /* Make the brand title bold */
+}
+
+/* Flexbox for navbar links */
+.navbar-links {
+    display: flex; /* Flex layout */
+    align-items: center; /* Center vertically */
+    flex-grow: 1; /* Allow links to grow */
+}
+
+/* Unordered list styles */
+.navbar-links ul {
+    display: flex; /* Flex layout for list items */
+    list-style-type: none; /* Remove default list styling */
+    margin: 0; /* Remove margin */
+    padding: 0; /* Remove padding */
+}
+
+/* List item styling */
+.navbar-links li {
+    margin-left: 20px; /* Space between items */
+    display: flex; /* Align items in the list */
+    align-items: center; /* Center icon and text vertically */
+}
+
+/* Icon styles */
+.navbar-links li i {
+    margin-right: 8px; /* Space between icon and text */
+}
+
+/* Button styles */
+.vote-button,
+.logout-button,
+.login-button {
+    background: gree; /* No background */
+    border: none; /* No border */
+    color: white; /* Text color */
+    cursor: pointer; /* Pointer cursor */
+    font-size: 16px; /* Font size */
+    transition: color 0.3s; /* Transition for hover effect */
+}
+
+.vote-button:hover,
+.logout-button:hover,
+.login-button:hover {
+    color: #e0e0e0; /* Lighter color on hover */
+}
+
+/* Hamburger icon styles */
+.hamburger {
+    display: none; /* Hide by default */
+    font-size: 24px; /* Size for the hamburger icon */
+    cursor: pointer; /* Pointer cursor */
+    color: white; /* Hamburger icon color */
+}
+
+/* Styles for smaller screens */
+@media (max-width: 768px) {
+    .navbar-links {
+        display: none; /* Hide links initially */
+        position: absolute; /* Positioning */
+        top: 60px; /* Below the navbar */
+        left: 0; /* Align to the left */
+        right: 0; /* Full width */
+        background-color: #4caf50; /* Background color */
+        z-index: 1; /* On top of other elements */
+        padding: 15px 0; /* Padding for dropdown */
+    }
+
+    .navbar-links.open {
+        display: flex; /* Show links when open */
+        flex-direction: column; /* Stack vertically */
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger icon */
+    }
+
+    .navbar-links li {
+        margin: 10px 0; /* Space between items in column layout */
+        text-align: center; /* Center text */
+    }
+}

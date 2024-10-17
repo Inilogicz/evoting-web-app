@@ -1,0 +1,99 @@
+/* Navbar.css */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Separate brand and nav items */
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #4caf50; /* Green color */
+}
+
+.navbar-brand h1 {
+    margin: 0;
+    color: white;
+}
+
+.navbar-links {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-links li {
+    margin-left: 20px;
+}
+
+.navbar-links a,
+.navbar-links button {
+    color: white;
+    text-decoration: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.active {
+    font-weight: bold;
+    text-decoration: underline; /* Highlight active link */
+}
+
+.vote-button,
+.logout-button,
+.login-button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #3e8e41; /* Darker green */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.vote-button:hover,
+.logout-button:hover,
+.login-button:hover {
+    background-color: #357a3a; /* Darker green on hover */
+}
+
+.hamburger {
+    display: none; /* Hide hamburger by default */
+    cursor: pointer;
+}
+
+.hamburger.open {
+    display: block; /* Show hamburger when menu is open */
+}
+
+.navbar-links.open {
+    display: flex; /* Show links when hamburger is clicked */
+}
+
+@media (max-width: 768px) {
+    .navbar-links {
+        display: none; /* Hide links on small screens */
+        flex-direction: column; /* Stack links vertically */
+        position: absolute;
+        right: 20px;
+        top: 60px; /* Adjust position as needed */
+        background-color: #4caf50; /* Green background */
+        padding: 10px;
+        border-radius: 8px; /* Rounded corners */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .navbar-links.open {
+        display: flex; /* Show links when hamburger is clicked */
+    }
+
+    .navbar-links li {
+        margin-left: 0; /* Reset margin for stacked links */
+        margin-bottom: 10px; /* Add space between links */
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger on small screens */
+        font-size: 24px; /* Adjust size as needed */
+        color: white; /* Hamburger icon color */
+    }
+}

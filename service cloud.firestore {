@@ -1,0 +1,14 @@
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /candidates/{candidateId} {
+      allow read: if request.auth != null; // Allow read for authenticated users
+      allow write: if request.auth != null && request.resource.data.votes is int &&
+                   request.resource.data.votes >= resource.data.votes; // Ensure votes only increment
+    }
+
+    match /voters/{voterId} {
+      allow read: if request.auth != null; // Allow read for authenticated users
+      allow write: if request.auth != null && !resource.data.hasVoted; // Prevent multiple votes
+    }
+  }
+}

@@ -1,0 +1,79 @@
+/* src/pages/Results.css */
+
+.results-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.chart-container {
+    margin-bottom: 30px;
+    height: 400px; /* Set a fixed height for the chart */
+}
+
+.candidates-list {
+    display: flex; /* Change to flex */
+    flex-wrap: wrap; /* Allow wrapping */
+    justify-content: space-between; /* Distribute space between items */
+    margin-top: 20px;
+}
+
+/* General styles for the card container */
+.candidates-list, .results-list {
+    display: flex; /* Use flex layout by default */
+    flex-wrap: wrap; /* Allow items to wrap */
+    justify-content: space-between; /* Space between cards */
+    margin-top: 20px;
+}
+
+
+
+.candidate-card:hover, .result-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Media query for small screens */
+@media (max-width: 768px) {
+    .candidates-list, .results-list {
+        display: flex !important; /* Switch to block layout */
+    }
+
+    .candidate-card, .result-card {
+        display: flex;
+        width: 100%; /* Full width for block layout */
+        margin: 10px 0; /* Vertical margin for spacing */
+    }
+}
+
+
+.candidate-card:hover {
+    transform: translateY(-5px);
+}
+
+.candidate-name {
+    font-size: 1.5em;
+    margin: 0 0 10px;
+    color: #007bff; /* Bootstrap primary color */
+}
+
+.candidate-party {
+    font-size: 1em;
+    margin: 0;
+    color: #666;
+}
+
+.candidate-votes {
+    font-weight: bold;
+    margin: 0;
+    color: #333;
+}

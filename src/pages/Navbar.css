@@ -1,0 +1,78 @@
+Navbar styles
+.navbar {
+  display: flex; /* Use flex layout */
+  justify-content: space-between; /* Space between brand and links */
+  align-items: center; /* Center items vertically */
+  padding: 10px 20px;
+  background-color: #007bff; /* Bootstrap primary color */
+  color: white;
+  position: relative; /* Positioning for the hamburger icon */
+}
+
+.navbar-brand h1 {
+  margin: 0;
+  font-size: 24px; /* Brand title size */
+}
+
+/* Flexbox for navbar links */
+.navbar-links {
+  display: flex; /* Flex layout */
+  align-items: center; /* Center vertically */
+  flex-grow: 1; /* Allow links to grow */
+}
+
+.navbar-links ul {
+  display: flex; /* Flex layout for list items */
+  list-style-type: none; /* Remove default list styling */
+  margin: 0; /* Remove margin */
+  padding: 0; /* Remove padding */
+}
+
+.navbar-links li {
+  margin-left: 20px; /* Space between items */
+}
+
+/* Button styles */
+.vote-button,
+.logout-button,
+.login-button {
+  background: none; /* No background */
+  border: none; /* No border */
+  color: white; /* Text color */
+  cursor: pointer; /* Pointer cursor */
+  font-size: 16px; /* Font size */
+}
+
+/* Hamburger icon styles */
+.hamburger {
+  display: none; /* Hide by default */
+  font-size: 24px; /* Size for the hamburger icon */
+  cursor: pointer; /* Pointer cursor */
+}
+
+/* Styles for smaller screens */
+@media (max-width: 768px) {
+  .navbar-links {
+      display: none; /* Hide links initially */
+      position: absolute; /* Positioning */
+      top: 60px; /* Below the navbar */
+      left: 0; /* Align to the left */
+      right: 0; /* Full width */
+      background-color: #007bff; /* Background color */
+      z-index: 1; /* On top of other elements */
+  }
+
+  .navbar-links.open {
+      display: flex; /* Show links when open */
+      flex-direction: column; /* Stack vertically */
+  }
+
+  .hamburger {
+      display: block; /* Show hamburger icon */
+  }
+
+  .navbar-links li {
+      margin: 10px 0; /* Space between items in column layout */
+      text-align: center; /* Center text */
+  }
+}
